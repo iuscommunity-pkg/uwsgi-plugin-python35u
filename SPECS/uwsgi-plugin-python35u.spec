@@ -7,7 +7,7 @@
 %global python python35u
 
 Name: uwsgi-plugin-%{python}
-Version: 2.0.13.1
+Version: 2.0.14
 Release: 1.ius%{?dist}
 Summary: uWSGI - Plugin for Python support
 Group: System Environment/Daemons
@@ -51,5 +51,8 @@ install -D -p -m 0755 %{python}_plugin.so %{buildroot}%{_libdir}/uwsgi/%{python}
 
 
 %changelog
+* Wed Oct 12 2016 Carl George <carl.george@rackspace.com> - 2.0.14-1.ius
+- Rebuild against uwsgi 2.0.14
+
 * Thu Sep 01 2016 Carl George <carl.george@rackspace.com> - 2.0.13.1-1.ius
 - Initial package
