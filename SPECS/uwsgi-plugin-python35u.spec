@@ -38,7 +38,7 @@ cp -a %{_usrsrc}/uwsgi/%{version}/plugins/python .
 
 %build
 export CFLAGS="%{optflags} -Wno-unused-but-set-variable"
-export PYTHON=%{__python35u}
+export PYTHON=%{__python35}
 uwsgi --build-plugin "python %{python}"
 
 
@@ -53,6 +53,7 @@ install -D -p -m 0755 %{python}_plugin.so %{buildroot}%{_libdir}/uwsgi/%{python}
 %changelog
 * Thu Feb 22 2018 Jessica Widener <jessica.widener@rackspace.com> - 2.0.16-1.ius
 - Rebuild against uwsgi 2.0.16
+- update python macro per iuscommunity-pkg/python35u@71a8838
 
 * Tue May 23 2017 Ben Harper <ben.harper@rackspace.com> - 2.0.15-1.ius
 - Rebuild against uwsgi 2.0.15
